@@ -1,0 +1,274 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #1a1a1a;
+  color: #eee;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+header.hero {
+  height: 100vh;
+  background: linear-gradient(to right, #2e2e2e, #121212);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.highlight {
+  color: #4dd0e1;
+}
+
+.sub {
+  font-size: 1.2rem;
+  color: #aaa;
+  margin-top: 10px;
+}
+
+.portfolio {
+  padding: 50px 20px;
+  text-align: center;
+  animation: fadeUp 1s ease-in-out;
+}
+
+.portfolio h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  background: #292929;
+  padding: 20px;
+  border-radius: 12px;
+  width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(77, 208, 225, 0.3);
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #111;
+  color: #888;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeUp {
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #1a1a1a;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 999;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.logo {
+  color: #4dd0e1;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links li a {
+  color: #eee;
+  text-decoration: none;
+  font-size: 1rem;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect with underline animation */
+.nav-links li a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: #4dd0e1;
+  left: 0;
+  bottom: -4px;
+  transition: width 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #4dd0e1;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+/* Add padding-top to hero to avoid being hidden under navbar */
+.hero {
+  padding-top: 80px;
+}
+
+.contact {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+
+/*contact*/
+
+.contact-form-section {
+  padding: 60px 20px;
+  text-align: center;
+  animation: fadeUp 1s ease-in-out;
+}
+
+.contact-form-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #4dd0e1;
+}
+
+.contact-form-section p {
+  color: #bbb;
+  margin-bottom: 30px;
+}
+
+.contact-form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #333;
+  color: #eee;
+  font-size: 1rem;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #4dd0e1;
+}
+
+.contact-form button {
+  background: #4dd0e1;
+  color: #111;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: #00acc1;
+}
+
+
+/* certificate*/
+
+.certificates {
+  padding: 60px 20px;
+  text-align: center;
+  animation: fadeUp 1s ease-in-out;
+}
+
+.certificates h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #4dd0e1;
+}
+
+.cert-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.cert-card {
+  background: #292929;
+  padding: 20px;
+  border-radius: 12px;
+  width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #ccc;
+}
+
+.cert-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(77, 208, 225, 0.3);
+}
+
+
+/*About*/
+
+.about {
+  padding: 60px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  animation: fadeUp 1s ease-in-out;
+}
+
+.about h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #4dd0e1;
+}
+
+.about p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #ccc;
+}
+
+/*NAV_BAR*/
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+
+
